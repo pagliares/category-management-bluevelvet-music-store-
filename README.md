@@ -1,1 +1,223 @@
 # Term assignment: Front-end web application for managing product categories in the Bluevelvet Music Store.
+
+A front-end web application for managing product categories in the BlueVelvet Music Store, built using vanilla HTML, CSS, and JavaScript.
+
+This application must be developed as term assignment for the first part (frontend development) of Web Programming course, taught by Rodrigo Martins Pagliares at the undergraduate Computer Science course at UNIFAL-MG - Alfenas - MG - Brazil.
+
+You can try the the web application without a backend application and a database server. The frontend in this term assignment is self-contained and can be used to perform simple CRUD operations on a categories table upon logging in. The data is stored and retrieved from LocalStorage. New users can register themselves.
+
+## What the students neeed to do in this assignment?
+
+- Use vanilla CSS (no library of framework, such as React, BootStrap, Vue, etc.. allowed) to style all the HTML pages created for the user stories described in the sequence of this README file.
+- Use the JavaScript LocalStorage API to simulate back-end persistence in the frontend.
+- In addition to the details provided in this README.md file, the student must take a look at all the files located in the frontend/begin directory of this repository looking for comments with addiional tips and instructions for this assignment.
+
+## Technologies Used (frontend)
+
+- HTML
+- Vanilla CSS (without CSS libraries such as BootStrap pr TailWind)
+- JavaScript (without libraries\frameworks such as vue or React)
+
+## Definition of DONE (Scrum)
+
+For the sake of this assignment, only the views (Web User Interfaces) for the user stories must be implemented. Backend persistence must be simulated with JavaScript LocalStorage API. 
+
+The user stories are considered completed if:
+- They meet the acceptance criteria;
+- They are decoupled from backend 
+- The view layer must fully responsive (responsive layout).
+- It must be possible to navigate throughout the views.
+
+## User stories TO BE implemented in this assignment (2025/02)
+
+| # | ID | DESCRIPTION |
+|----------|----------|----------|
+| 01    | US-1232   | Login      |
+| 02    | US-1603   | Register new users     |
+| 03    | US-2032   | Access the Category Management Dashboard     |
+| 08    | US-1306   | Create category of products      |
+| 09    | US-0907   | List categories of products     |
+| 10    | US-2100   | List products within a category for the online shopper |
+| 11    | US-1307   | Edit category of products     |
+| 12    | US-0904   | Delete category of products    |
+| 13    | US-0913   | Sort category of products     |
+| 14    | US-0914   | Filter category of products     |
+| 15    | US-0916   | Export category of products     |
+
+## Requirements (Written as user stories)
+
+ ### US-1232: Login  
+
+"As an Administrator I want to login in the BlueVelvet Music Store application with my registered account in order to manage all products sold by the company."
+
+Acceptance criteria:
+
+- A login has an e-mail address and a password.
+- there must be an explicit option tor remember the administrator credentials
+- An incorrect login message must be shown for incorrect email and/or password. Suggestion: "Incorrect email or password. Please try again"
+- The password must be at least 8 characters long
+- There must be an option allowing new administrators to create an account. Suggestion: "Don't have an account? Register"
+
+![US-1232: Login](frontend/images/user_stories/us-1232/begin/us-1232-begin.png)
+**Figure 1:** US-1232 - Login Screen (provided as starting point for the assignment)
+
+ ### US-1603: Register new users  
+
+"As an administrator I want to register new users in BlueVelvet Music Store application to allow multiple people to work collaboratively and perform their responsibilities in the company"
+
+Acceptance criteria:
+
+- Only administrators can register new users.
+- A user must have a role.
+- 5 User (admin) roles: Administrator, Sales Manager, Editor,, Assistant, Shipping Manager
+- A user has an e-mail address and a password.
+- A message "Already have an account? Login" must be presented to allow returnin to the login page.
+
+### US-2032: Access the Category Management Dashboard  (ALREADY IMPLEMENTED)
+
+"As an Administrator I want to access the Category Management Dashboard to manage all categories, including listing all categories in order to have a global view of all categories of products available in Blue Velvet Music store."
+
+Acceptance criteria:
+
+- Only authenticated users in the role orf admin, salesperson or shipper can access the dashboard.
+- The dashboard, among other things, contains  a list categories.
+- A message showing the logged-in user should be presented: "Welcome,{username} (role)
+- if a user tries to access the dashboard page without logging in then an error page is displayed.
+- An option to logout of this page must be presented for security reasons. After clicking logout, the login form must be presented (See US 1351 and 1358)
+- The list of categories may be too long. Provide a way for navigation (e.g. pagination for the products list)
+- By default, it must be possible to see 10 categories per page (pagination)
+- Pagination is based on categories names 
+- Pagination should work well with sorting 
+- Sort by category name and ID
+- Default sorting by name, ascending order
+- Filter: search by category name 
+- The fields main image and category name must be shown
+- To see category details, see US-1045
+- From the dashboard it must be possible to add, view deails, delete, and edit category information.
+- There must be an option to reset the category list to it's initial state (to facilitate testing, there will be 10 categories initially created when first running the application of after selecting the option reset the product list.
+
+![US-1232: Register](frontend/images/user_stories/us-2032/begin/us-2032-begin.png)
+**Figure 5:** US-2032 - Access the Product Management Dashboard (provided as starting point for the assignment)
+
+![US-1232: Register](frontend/images/user_stories/us-1603/begin/us-1603-begin.png)
+**Figure 3:** US-1603 - Register new users (provided as starting point for the assignment)
+
+### US-1306: Create category of products 
+
+"As an Administrator I want to create a category for a product in order to better organize the products sold by Blue Velvet Music Store."
+
+Acceptance criteria:
+
+- Only authenticated users in the role orf admin can manage categories.
+- A category has an ID,  a name (unique), an image representing the category and a parent category if it is not a top-level(root) category
+     - parent_id: refers to ID of parent category, or null if it is the top-level category (no parent)
+- A category may have many children categories
+- Only image file name are stored. The actual image file is stored on the file system (dev) or Amazon S3 (production)
+- The Administrator can enable/disable a category
+- Some (not limited) categories: T-Shirts, Vinyl, CD, MP3, Books, Acoustic Guitar
+
+Create a script/program to import sample categories/subcategories information into the databasse for testing purposes.
+
+Unit tests:
+- Test creating top-level (root) categories
+- Test creating sub categories
+- Test getting a category and its children
+- Test printing categories in hierarchical form
+
+
+### US-0907: List categories of products 
+
+"As an Administrator I want to listt all categories of products in order to have a global view of all categories of products sold by Blue Velvet Music Store"
+
+Acceptance criteria:
+
+- Only authenticated users in the role orf admin or editor can manage categories.
+- If the list of categories is too long, provide a way for navigation (e.g. pagination for the categories list)
+ - By default, it must be posible to see 5 top level categories per page (pagination)
+- Pagination is based on top-level categories (sub categories not counted)
+- Administrators may sort categories name in ascending or descending order. Sorted by root categories first, then by sub categories
+- Pagination should work well with sorting 
+
+Note: Make Categories Page Fully Responsive
+
+### US-2100: List products within a category for the online shopper  
+
+"As an Online shopper I want to list all of products witin a category in order to have a global view of all products  sold on Blue Velvet Music store"
+
+Acceptance criteria:
+
+- Show only enabled products
+- Show enabled sub categories (sorted by name ascending)
+- Products are sorted by name in alphabetical order
+- Show breadcrumb: Home / Music /mp3
+- Link pattern for a product: /product/product_alias
+- /product/pavement_brighten_in_the_corners
+- /product/dinosaur_jr/green_mind
+- Show discount price (if any): $25.00 $22.50
+- List is paginated (10 products per page)
+
+### US-1307: Edit category of products 
+
+"As an Administrator I want to edit an existing category of products to improve the information of the products sold by Blue Velvet Music Store"
+
+Acceptance criteria:
+
+- Only authenticated users in the role of admin can manage categories.
+- All fields of a category may be updated.  
+- If new image is uploaded, delete the old one
+- If no image is uploaded, do nothing with current image
+- In edit mode, category image is not required
+- See US-1306 - Create Category of products - for the category fields.
+
+### US-0904: Delete category of products  
+
+"As an Administrator I want to delete a category for a product in order to better organize the products sold by Blue Velvet Music Store"
+
+Acceptance criteria:
+
+- Only authenticated users in the role orf admin or editor can manage categories.
+- Only categories that have no children can be deleted.
+- Also delete the category image directory
+
+Note: Make Categories Page Fully Responsive
+
+### US-0913: Sort category of products 
+
+"As an Administrator I want to sort all categories of products in order to see more quickly the categories I am looking for."
+
+Acceptance criteria:
+
+- Only authenticated users in the role orf admin or editor can manage categories.
+- Ascending, descending order
+
+Note: Make Categories Page Fully Responsive
+
+### US-0914: Filter category of products  
+
+"As an Administrator I want to filter the categories of products in order to see more quickly the categories I am looking for."
+
+Acceptance criteria:
+
+- Only authenticated users in the role orf admin or editor can manage categories.
+- Search for category names (like match – not full text search)
+- Search result do not show categories in hierarchical form
+- Filter should work well with sorting and paging
+
+Note: Make Categories Page Fully Responsive
+
+### US-0916: Export category of products  
+
+"As an Administrator I want to export the categories of products in order to import it in a Spreadsheet for other purposes"
+
+Acceptance criteria:
+
+- Only authenticated users in the role orf admin or editor can manage categories.
+- It must be possible to export the categories in csv format
+- File name pattern: categories_2021-03-20_10-07-09.csv
+- Export only two fields: id and name
+- Keep hierarchical form, replace “--” by “ “ (2 whitespaces)
+
+
+
+
+
