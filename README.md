@@ -73,7 +73,7 @@ Acceptance criteria:
 - A user has an e-mail address and a password.
 - A message "Already have an account? Login" must be presented to allow returnin to the login page.
 
-![US-1232: Register](images/user_stories/us-1603/end/us-1603-end.png)
+![US-1603: Register](images/user_stories/us-1603/end/us-1603-end.png)
 **Figure 2:** US-1603 - Register new users  
 
 ### US-2032: Access the Category Management Dashboard 
@@ -120,6 +120,11 @@ Unit tests:
 - Test creating sub categories
 - Test getting a category and its children
 - Test printing categories in hierarchical form
+
+
+![US-1306: Create_Category](images/user_stories/us-1306/begin/Create_New_Category.png)
+
+**Figure 4:** US-1306: Create category of products 
 
 
 ### US-0907: List categories of products 
