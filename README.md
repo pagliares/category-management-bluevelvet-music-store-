@@ -58,8 +58,8 @@ Acceptance criteria:
 - The password must be at least 8 characters long
 - There must be an option allowing new administrators to create an account. Suggestion: "Don't have an account? Register"
 
-![US-1232: Login](images/user_stories/us-1232/begin/us-1232-begin.png)
-**Figure 1:** US-1232 - Login Screen (provided as starting point for the assignment)
+![US-1232: Login](images/user_stories/us-1232/end/us-1232-end.png)
+**Figure 1:** US-1232 - Login Screen  
 
  ### US-1603: Register new users  
 
@@ -72,6 +72,9 @@ Acceptance criteria:
 - 5 User (admin) roles: Administrator, Sales Manager, Editor,, Assistant, Shipping Manager
 - A user has an e-mail address and a password.
 - A message "Already have an account? Login" must be presented to allow returnin to the login page.
+
+![US-1232: Register](images/user_stories/us-1603/end/us-1603-end.png)
+**Figure 2:** US-1603 - Register new users  
 
 ### US-2032: Access the Category Management Dashboard 
 
