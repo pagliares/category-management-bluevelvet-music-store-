@@ -221,7 +221,8 @@ Acceptance criteria:
 - Export only two fields: id and name
 - Keep hierarchical form, replace “--” by “ “ (2 whitespaces)
 
+# Tips
 
-
+This assignment complements the one used in the Web Programming course. Check its <a href="https://github.com/pagliares/product-management-bluevelvet-music-store" target="_blank"> repository</a> to get some ideas for this assignment. Note that the Web Programming repository includes a frontend example that simulates CRUD operations on products of the BlueVelvet Music Store without a backend implementation, using the JavaScript LocalStorage API to simulate persistence.
 
 
