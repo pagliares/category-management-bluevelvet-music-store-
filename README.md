@@ -1,4 +1,4 @@
-# Term assignment: Front-end web application for managing product categories in the Bluevelvet Music Store.
+# Term assignment: Full-stack web application for managing product categories in the Bluevelvet Music Store.
 
 A front-end web application for managing product categories in the BlueVelvet Music Store, built using vanilla HTML, CSS, and JavaScript.
 
@@ -44,7 +44,7 @@ The user stories are considered completed if:
 | 14    | US-0914   | Filter category of products     |
 | 15    | US-0916   | Export category of products     |
 
-## Requirements (Written as user stories)
+## Requirements  
 
  ### US-1232: Login  
 
@@ -58,7 +58,7 @@ Acceptance criteria:
 - The password must be at least 8 characters long
 - There must be an option allowing new administrators to create an account. Suggestion: "Don't have an account? Register"
 
-![US-1232: Login](frontend/images/user_stories/us-1232/begin/us-1232-begin.png)
+![US-1232: Login](images/user_stories/us-1232/begin/us-1232-begin.png)
 **Figure 1:** US-1232 - Login Screen (provided as starting point for the assignment)
 
  ### US-1603: Register new users  
@@ -96,10 +96,10 @@ Acceptance criteria:
 - From the dashboard it must be possible to add, view deails, delete, and edit category information.
 - There must be an option to reset the category list to it's initial state (to facilitate testing, there will be 10 categories initially created when first running the application of after selecting the option reset the product list.
 
-![US-1232: Register](frontend/images/user_stories/us-2032/begin/us-2032-begin.png)
+![US-1232: Register](images/user_stories/us-2032/begin/us-2032-begin.png)
 **Figure 5:** US-2032 - Access the Product Management Dashboard (provided as starting point for the assignment)
 
-![US-1232: Register](frontend/images/user_stories/us-1603/begin/us-1603-begin.png)
+![US-1232: Register](images/user_stories/us-1603/begin/us-1603-begin.png)
 **Figure 3:** US-1603 - Register new users (provided as starting point for the assignment)
 
 ### US-1306: Create category of products 
