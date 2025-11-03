@@ -176,6 +176,18 @@ Acceptance criteria:
 - In edit mode, category image is not required
 - See US-1306 - Create Category of products - for the category fields.
 
+**Figure 5:** US-1307: Edit category of products 
+
+![US-1306: Create_Category](images/user_stories/us-1306/begin/Create_New_Category.png)
+
+**Figure 6:** US-1307: Edit category of products 
+
+![US-1306: Create_Category](images/user_stories/us-1306/begin/Category_Subcategories.png)
+
+**Figure 4:** US-1306: Create category of products 
+
+**Figure 4:** US-1306: Create category of products 
+
 ### US-0904: Delete category of products  
 
 "As an Administrator I want to delete a category for a product in order to better organize the products sold, by categoty, in Blue Velvet Music Store"
