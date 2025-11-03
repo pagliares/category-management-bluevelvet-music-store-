@@ -203,6 +203,10 @@ Acceptance criteria:
 
 Note: Make Categories Page Fully Responsive
 
+<img src="images/user_stories/us-0904/us-0904_delete_categorie.png" alt="US-0907: Login" width="512" height="768" />
+
+**Figure 5:** US-0907 - List categories of products
+
 ### US-0913: Sort category of products 
 
 "As an Administrator I want to sort all categories of products in order to see more quickly the categories I am looking for."
