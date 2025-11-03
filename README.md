@@ -65,7 +65,7 @@ Acceptance criteria:
 - There must be an option allowing new administrators to create an account. Suggestion: "Don't have an account? Register"
 
 ![US-1232: Login](images/user_stories/us-1232/end/us-1232-end.png)
-**Figure 1:** US-1232 - Login Screen  
+**Figure 5:** US-1232 - Login Screen  
 
  ### US-1603: Register new users  
 
@@ -150,6 +150,10 @@ Acceptance criteria:
 - Pagination should work well with sorting 
 
 Note: Make Categories Page Fully Responsive
+
+<img src="images/user_stories/us-0907/US-0907_List_Categories_of_Products.png" alt="US-0907: Login" width="512" height="758" />
+**Figure 1:** US-0907 - List categories of products
+
 
 ### US-2100: List products within a category for the online shopper  
 
